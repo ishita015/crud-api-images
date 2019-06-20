@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>CompanyName</th>
+    <th>Price</th>
+
+    <th>Image</th>
+  </tr>
+  <tr *ngFor="let list of array">
+    <td>{{list.companyName}}</td>
+    <td>{{list.price}}</td>
+    <!-- <td *ngIf="list.image"><img src="http://localhost:3300/{{list.image}}" width=100px height=100x></td> -->
+    <td *ngIf="list.image"><video width="220" height="150" controls>
+        <source src="http://localhost:3300/{{list.image}}" type="video/mp4">
+      </video></td>
+  </tr>
+</table>

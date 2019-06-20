@@ -1,0 +1,39 @@
+<div class="container">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-25">
+        <label>Company Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" formControlName="companyName">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label>Price</label>
+      </div>
+      <div class="col-75">
+        <input type="text" formControlName="price">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label>Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" formControlName="email">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label>Image</label>
+      </div>
+      <div class="col-75">
+        <input type="file" id="image" formControlName="image" (change)="onFileChanged($event)">
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
